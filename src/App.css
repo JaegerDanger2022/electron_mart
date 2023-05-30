@@ -1,0 +1,109 @@
+/* Fonts */
+/* Navbar fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap"); /* font-family: 'Montserrat', sans-serif; */
+/* Mid banner fonts */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+/* Nav Bar styles*/
+/* Top Banner */
+.topBanner {
+  display: grid;
+  grid-template-areas: "customer_service shipping_and_return_link track_order_link ";
+  background-color: #0769da;
+  height: 5vh;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.topBanner p span {
+  font-weight: 800;
+}
+.customer_service {
+  grid-area: customer_service;
+  width: 70vw;
+  padding-left: 3vw;
+}
+
+.shipping_and_return_link {
+  grid-area: shipping_and_return_link;
+  width: 15vw;
+}
+
+.track_order_link {
+  grid-area: track_order_link;
+  width: 15vw;
+  align-self: center;
+}
+
+/* Mid Banner */
+.midBanner {
+  display: grid;
+  grid-template-areas: "logo searchDiv";
+  padding-top: 2vh;
+  align-items: center;
+  background-color: #0573f0;
+  padding-bottom: 2vh;
+  color: white;
+}
+
+.midBanner .logo {
+  grid-area: logo;
+  width: 10vw;
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+  margin-left: 3vw;
+}
+
+.midBanner .searchDiv {
+  grid-area: searchDiv;
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "searchBar searchBtn";
+  justify-content: end;
+}
+.searchBar {
+  grid-area: searchBar;
+}
+.searchBtn {
+  grid-area: searchBtn;
+  margin-left: 1vw;
+  margin-right: 6vw;
+}
+
+/* LowerMenuBanner */
+.lowerBanner {
+  background-color: #0573f0;
+  border: none;
+  border-top: 1px solid #0769da;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.categories_and_cart {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-left: 3vw;
+}
+.categories_and_cart a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.categories_and_cart a:hover {
+  color: salmon;
+}
+.cart_and_login {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cart_vertical_line {
+  width: 0vw;
+  border-left: 1px solid white;
+  height: 3vh;
+  align-content: center;
+}
+.cart {
+  padding-right: 2vw;
+}
+.login {
+  padding-right: 3vw;
+}
