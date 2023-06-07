@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useAddToCart } from "./util/useAddToCart";
 
 export const LowerMenuBanner = () => {
+  const cartTotal = useAddToCart();
   return (
     <div className="lowerBanner">
       <div className="categories_and_cart">
@@ -15,6 +17,7 @@ export const LowerMenuBanner = () => {
         <div className="cart_and_login">
           <div className="cart">
             <NavLink>Cart</NavLink>
+            <span className="cartTotal">{cartTotal.cartCount}</span>
           </div>
           <div className="cart_vertical_line"></div>
           <div className="login">
