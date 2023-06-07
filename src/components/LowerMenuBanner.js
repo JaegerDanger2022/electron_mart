@@ -5,12 +5,13 @@ export const LowerMenuBanner = () => {
   return (
     <div className="lowerBanner">
       <div className="categories_and_cart">
-        <NavLink>All Products</NavLink>
-        <NavLink>Home Applieances</NavLink>
-        <NavLink to="audio-video">Audio & Video</NavLink>
-        <NavLink>New Arivals</NavLink>
-        <NavLink>Today's Deal</NavLink>
-        <NavLink>Gift Cards</NavLink>
+        <div className="categoryLinks">
+          <NavLink to="/electronics/ElectronicsProducts">Electronics</NavLink>
+          <NavLink to="/men's clothing/mensClothing">Men's Clothing</NavLink>
+          <NavLink to="/women's clothing/womensClothing">
+            Women's Clothing
+          </NavLink>
+        </div>
         <div className="cart_and_login">
           <div className="cart">
             <NavLink>Cart</NavLink>

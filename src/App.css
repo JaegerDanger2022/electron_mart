@@ -10,7 +10,6 @@
   display: grid;
   grid-template-areas: "customer_service shipping_and_return_link track_order_link ";
   background-color: #0769da;
-  height: 5vh;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -44,7 +43,11 @@
   padding-bottom: 2vh;
   color: white;
 }
-
+.midBanner a {
+  text-decoration: none;
+  font-family: "Russo One", sans-serif;
+  color: white;
+}
 .midBanner .logo {
   grid-area: logo;
   width: 10vw;
@@ -80,8 +83,7 @@
 
 .categories_and_cart {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding-left: 3vw;
+  grid-template-areas: "links cart";
 }
 .categories_and_cart a {
   text-decoration: none;
@@ -91,19 +93,87 @@
 .categories_and_cart a:hover {
   color: salmon;
 }
-.cart_and_login {
+.categoryLinks {
+  grid-area: links;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 3vw;
+}
+.cart_and_login {
+  grid-area: cart;
+  display: grid;
+  grid-template-areas: "cartLink verticalLine loginLink";
+  justify-content: space-evenly;
 }
 .cart_vertical_line {
+  grid-area: verticalLine;
   width: 0vw;
   border-left: 1px solid white;
   height: 3vh;
   align-content: center;
 }
 .cart {
-  padding-right: 2vw;
+  grid-area: cartLink;
 }
 .login {
-  padding-right: 3vw;
+  grid-area: loginLink;
+}
+
+/* Product Page */
+.productPage {
+  display: grid;
+  grid-template-areas: "categoriesSideBar productDisplay";
+  margin-top: 3vh;
+  margin-left: 3vw;
+}
+.categoriesSideBar {
+  grid-area: categoriesSideBar;
+  width: 30vw;
+}
+.productDisplay {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-area: productDisplay;
+  width: 70vw;
+  margin-bottom: 3vh;
+  row-gap: 5vw;
+}
+/* Product Display */
+/* Category Side Bar */
+.categoryListTitle {
+  font-weight: 400;
+  font-size: 3vw;
+  margin-bottom: 10vh;
+}
+.categoryList {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.categoryList a {
+  margin-bottom: 5vh;
+  text-decoration: none;
+  color: rgb(43, 42, 42);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.categoryList a:hover {
+  color: #0573f0;
+}
+/* Product Item Card*/
+.productItemCard {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "title"
+    "price";
+}
+.productItemImage {
+  grid-area: image;
+}
+.productItemTitle {
+  grid-area: title;
+  width: 300px;
+}
+.productItemPrice {
+  grid-area: price;
 }
