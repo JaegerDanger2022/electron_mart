@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useAddToCart } from "./util/useAddToCart";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+
+import { Icon } from "@mui/material";
 
 export const LowerMenuBanner = () => {
   const cartTotal = useAddToCart();
@@ -16,9 +19,14 @@ export const LowerMenuBanner = () => {
         </div>
         <div className="cart_and_login">
           <div className="cart">
-            <NavLink>Cart</NavLink>
+            <NavLink to="/cart">
+              <Icon>
+                <LocalMallIcon />
+              </Icon>
+            </NavLink>
             <span className="cartTotal">{cartTotal.cartCount}</span>
           </div>
+
           <div className="cart_vertical_line"></div>
           <div className="login">
             <NavLink>Login</NavLink>

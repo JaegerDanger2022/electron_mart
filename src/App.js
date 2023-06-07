@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { WomenClothing } from "./pages/WomenClothing";
 import { CartProvider } from "./components/util/useAddToCart";
+import { Cart } from "./pages/Cart";
 
 const queryClient = new QueryClient();
 function App() {
@@ -30,6 +31,7 @@ function App() {
               path="/:category/womensClothing"
               element={<WomenClothing />}
             ></Route>
+            <Route path="/cart" element={<Cart />}></Route>
           </Routes>
           <ReactQueryDevtools initialIsOpen={false} />
         </div>

@@ -5,8 +5,8 @@ export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
   const [cartItemName, setCartItemName] = useState([]);
 
-  const addToCart = (count) => {
-    setCartCount(count);
+  const addToCart = () => {
+    setCartCount(cartCount + 1);
   };
 
   return (

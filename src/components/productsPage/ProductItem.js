@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAddToCart } from "../util/useAddToCart";
+import { IconButton } from "@mui/material";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+
 export const ProductItem = ({ productImage, productTitle, productPrice }) => {
-  const [count, setCount] = useState(0);
   const addToCartHook = useAddToCart();
   const handleAddToCart = () => {
-    addToCartHook.addToCart(count + 1);
-    setCount(count + 1);
+    addToCartHook.addToCart();
   };
   const backgroundStyle = {
     backgroundImage: `url(${productImage})`,
@@ -19,7 +20,9 @@ export const ProductItem = ({ productImage, productTitle, productPrice }) => {
     <div className="productItemCard">
       <div className="productItemImage" style={backgroundStyle}></div>
       <div className="addToCart" onClick={handleAddToCart}>
-        +
+        <IconButton>
+          <AddShoppingCartOutlinedIcon color="warning" />
+        </IconButton>
       </div>
       <div className="productItemTitle">{productTitle}</div>
       <div className="productItemPrice">${productPrice}</div>

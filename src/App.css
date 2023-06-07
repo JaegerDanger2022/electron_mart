@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap"); /* font-family: 'Montserrat', sans-serif; */
 /* Mid banner fonts */
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* Hero Article Fonts */
+/* Title and Paragraph */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;600&display=swap");
 
 /* Nav Bar styles*/
 /* Top Banner */
@@ -81,11 +84,19 @@
   padding-bottom: 2vh;
 }
 .cartTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  z-index: 2;
+  height: 3vh;
+  width: 1vw;
   border-radius: 50%;
   padding: 0.5vh 0.5vw 0.5vh 0.5vw;
   color: white;
-  background-color: salmon;
-  margin-left: 1vw;
+  background-color: red;
 }
 
 .categories_and_cart {
@@ -121,9 +132,60 @@
 }
 .cart {
   grid-area: cartLink;
+  position: relative;
 }
 .login {
   grid-area: loginLink;
+}
+/* Home Page */
+/* Hero */
+.hero {
+  position: relative;
+  background-image: url("../src/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 10vh;
+  margin-bottom: 20vh;
+  height: 100vh;
+}
+.heroArticle {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+}
+.heroInfobar {
+  position: absolute;
+}
+/* Hero Article */
+.heroArticleContainer {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "paragraph"
+    "calltoaction";
+  background-color: #eae3e3;
+  width: 25vw;
+  height: 60vh;
+}
+.heroArticleTitle {
+  grid-area: title;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 2vw;
+  text-align: center;
+  color: #27323f;
+  padding: 5vh 2vw 0 2vw;
+}
+.heroArticleParagraph {
+  grid-area: paragraph;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 200;
+  padding: 0 2vw 0 2vw;
+}
+.heroArticleCallToAction {
+  grid-area: calltoaction;
+  padding: 0 0 0 2vw;
 }
 
 /* Product Page */
@@ -181,9 +243,7 @@
   top: 10px;
   right: 10px;
   z-index: 2;
-  background-color: #e7da1e;
   padding: 8px;
-  border-radius: 4px;
 }
 .productItemCard:hover {
   border: none;
@@ -205,4 +265,16 @@
   grid-area: price;
   padding-left: 2vw;
   color: #0573f0;
+}
+
+/* Cart Page */
+.cartPageDisplay {
+  display: grid;
+  grid-template-areas: "summary total";
+}
+.summary {
+  grid-area: summary;
+}
+.total {
+  grid-area: total;
 }
