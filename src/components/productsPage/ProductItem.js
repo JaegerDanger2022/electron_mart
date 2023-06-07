@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useAddToCart } from "../util/useAddToCart";
-
 export const ProductItem = ({ productImage, productTitle, productPrice }) => {
   const [count, setCount] = useState(0);
   const addToCartHook = useAddToCart();
@@ -20,7 +19,7 @@ export const ProductItem = ({ productImage, productTitle, productPrice }) => {
     <div className="productItemCard">
       <div className="productItemImage" style={backgroundStyle}></div>
       <div className="addToCart" onClick={handleAddToCart}>
-        Add To Cart
+        +
       </div>
       <div className="productItemTitle">{productTitle}</div>
       <div className="productItemPrice">${productPrice}</div>
