@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAddToCart } from "../util/useAddToCart";
 import { IconButton } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export const ProductItem = ({ productImage, productTitle, productPrice }) => {
+  // product count state
+  const [itemCount, setItemCount] = useState(0);
   const addToCartHook = useAddToCart();
+  // Cart handlers
   const handleAddToCart = () => {
     addToCartHook.addToCart();
+    // Summary Page handlers
+    addToCartHook.addSummaryProductDetails(productTitle, productImage);
+    // setItemCount(itemCount + 1);
+    // addToCartHook.summaryCount(itemCount + 1);
   };
+
   const backgroundStyle = {
     backgroundImage: `url(${productImage})`,
     backgroundSize: "contain",

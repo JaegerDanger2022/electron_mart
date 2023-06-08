@@ -1,6 +1,6 @@
 import React from "react";
-import { CartSummary } from "../components/cartComponents/CartSummary";
-import { CartTotal } from "../components/cartComponents/CartTotal";
+import { CartSummary } from "../components/cartPageComponents/CartSummary";
+import { CartTotal } from "../components/cartPageComponents/CartTotal";
 
 export const Cart = () => {
   return (
