@@ -156,6 +156,9 @@
 }
 .heroInfobar {
   position: absolute;
+  top: 106vh;
+  left: 5vw;
+  right: 5vw;
 }
 /* Hero Article */
 .heroArticleContainer {
@@ -186,6 +189,35 @@
 .heroArticleCallToAction {
   grid-area: calltoaction;
   padding: 0 0 0 2vw;
+}
+
+/* hero Info Bar */
+.heroInfoBarContainer {
+  display: grid;
+  grid-template-columns: 4fr 0.5fr 4fr 0.5fr 4fr 0.5fr 4fr; /* Adjusted grid-template-columns */
+  background-color: #eae3e3;
+  padding: 5vh 2vw 5vh 2vw;
+}
+
+.infoWrapper {
+  display: flex; /* Changed from grid to flex */
+  align-items: center; /* Added to vertically align items */
+}
+
+.infoBarIcon {
+  margin-right: 10px; /* Added margin for spacing */
+}
+
+.infoWrapperCol-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Added to align text to the left */
+  margin-left: 10px; /* Added margin for spacing */
+}
+
+.MuiDivider-root {
+  height: 100%; /* Set height to 100% to make the divider stretch vertically */
+  justify-self: center;
 }
 
 /* Product Page */
