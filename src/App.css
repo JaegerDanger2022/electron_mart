@@ -310,3 +310,31 @@
 .total {
   grid-area: total;
 }
+
+/* Summary Page */
+.summaryTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summaryTable th,
+.summaryTable td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.summaryItemImage img {
+  width: 10vw;
+  height: 10vw;
+  object-fit: contain;
+}
+
+.summaryItemName {
+  font-weight: bold;
+}
+
+.summaryItemPrice,
+.summaryItemCount {
+  text-align: center;
+}

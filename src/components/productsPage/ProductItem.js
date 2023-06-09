@@ -11,9 +11,7 @@ export const ProductItem = ({ productImage, productTitle, productPrice }) => {
   const handleAddToCart = () => {
     addToCartHook.addToCart();
     // Summary Page handlers
-    addToCartHook.addSummaryProductDetails(productTitle, productImage);
-    // setItemCount(itemCount + 1);
-    // addToCartHook.summaryCount(itemCount + 1);
+    addToCartHook.addSummaryProductDetails(productTitle);
   };
 
   const backgroundStyle = {

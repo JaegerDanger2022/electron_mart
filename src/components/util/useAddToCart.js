@@ -18,14 +18,9 @@ export const CartProvider = ({ children }) => {
   const addSummaryProductDetails = (itemName, itemImage) => {
     setSummaryItemName((prevSummaryItemName) => [
       ...prevSummaryItemName,
-      { id: summaryItemName.length + 1, name: itemName, image: itemImage },
+      { id: summaryItemName.length + 1, name: itemName },
     ]);
   };
-
-  //   summary count
-  //   const summaryCount = (item) => {
-  //     setItemCount(item + 1);
-  //   };
 
   return (
     <div>
