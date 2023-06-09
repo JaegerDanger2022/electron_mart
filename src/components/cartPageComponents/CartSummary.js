@@ -46,7 +46,12 @@ export const CartSummary = () => {
                 </td>
               ))}
             <td className="summaryItemName">{itemName}</td>
-            <td className="summaryItemPrice">{/* Add the price here */}</td>
+            {data?.data
+              .filter((item) => item.title === itemName)
+              .map((filteredItem) => (
+                <td className="summaryItemPrice">{filteredItem.price}</td>
+              ))}
+
             <td className="summaryItemCount">{count}</td>
           </tr>
         ))}

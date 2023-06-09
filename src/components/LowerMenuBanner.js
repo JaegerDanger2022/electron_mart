@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useAddToCart } from "./util/useAddToCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 
-import { Icon } from "@mui/material";
+import { Badge, Icon } from "@mui/material";
 
 export const LowerMenuBanner = () => {
   const cartTotal = useAddToCart();
@@ -18,15 +18,20 @@ export const LowerMenuBanner = () => {
           </NavLink>
         </div>
         <div className="cart_and_login">
-          <div className="cart">
-            <NavLink to="/cart">
-              <Icon>
-                <LocalMallIcon />
-              </Icon>
-            </NavLink>
-            <span className="cartTotal">{cartTotal.cartCount}</span>
-          </div>
-
+          <Badge
+            badgeContent={cartTotal.cartCount}
+            color="error"
+            showZero="true"
+          >
+            <div className="cart">
+              <NavLink to="/cart">
+                <Icon>
+                  <LocalMallIcon />
+                </Icon>
+              </NavLink>
+              {/* <span className="cartTotal">{cartTotal.cartCount}</span> */}
+            </div>
+          </Badge>
           <div className="cart_vertical_line"></div>
           <div className="login">
             <NavLink>Login</NavLink>

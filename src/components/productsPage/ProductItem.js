@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAddToCart } from "../util/useAddToCart";
 import { IconButton } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export const ProductItem = ({ productImage, productTitle, productPrice }) => {
-  // product count state
-  const [itemCount, setItemCount] = useState(0);
   const addToCartHook = useAddToCart();
   // Cart handlers
   const handleAddToCart = () => {
