@@ -18,11 +18,7 @@ export const LowerMenuBanner = () => {
           </NavLink>
         </div>
         <div className="cart_and_login">
-          <Badge
-            badgeContent={cartTotal.cartCount}
-            color="error"
-            showZero="true"
-          >
+          <Badge badgeContent={cartTotal.cartCount} color="error">
             <div className="cart">
               <NavLink to="/cart">
                 <Icon>

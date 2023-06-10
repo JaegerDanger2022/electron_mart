@@ -4,9 +4,11 @@ import { IconButton } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export const ProductItem = ({ productImage, productTitle, productPrice }) => {
+  // invoke the useAddToCart hook which contains the CartProvider
   const addToCartHook = useAddToCart();
   // Cart handlers
   const handleAddToCart = () => {
+    // increases the number of items added to the cart
     addToCartHook.addToCart();
     // Summary Page handlers
     addToCartHook.addSummaryProductDetails(productTitle);

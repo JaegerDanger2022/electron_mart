@@ -1,25 +1,28 @@
 import React, { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
+
 export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
-  //   count for individual items
-  //   const [itemCount, setItemCount] = useState(0);
-
   const [summaryItemName, setSummaryItemName] = useState([]);
+  const [subtotal, setSubTotal] = useState([]);
 
+  // increases the number of items added to the cart
   const addToCart = () => {
     setCartCount(cartCount + 1);
   };
-  const removeFromCart = () => {
-    setCartCount(cartCount - 1);
-  };
-  //   Order Summary Page
-  const addSummaryProductDetails = (itemName, itemImage) => {
+
+  // Adds item name and an id to an array
+  const addSummaryProductDetails = (itemName) => {
     setSummaryItemName((prevSummaryItemName) => [
       ...prevSummaryItemName,
       { id: summaryItemName.length + 1, name: itemName },
     ]);
+  };
+
+  const calculateSubTotal = (count, price) => {
+    const subTotal = count * price;
+    setSubTotal((prevSubTotal) => [...prevSubTotal, +subTotal]);
   };
 
   return (
@@ -31,9 +34,8 @@ export const CartProvider = ({ children }) => {
           setSummaryItemName,
           addToCart,
           addSummaryProductDetails,
-          //   setItemCount,
-          //   itemCount,
-          //   summaryCount,
+          calculateSubTotal,
+          subtotal,
         }}
       >
         {children}
