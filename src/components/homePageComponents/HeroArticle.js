@@ -6,7 +6,7 @@ export const HeroArticle = () => {
   return (
     <div className="heroArticleContainer">
       <div className="heroArticleTitle">
-        THE BEST HOME ENTERTAINMENT SYSTEM IS HERE
+        THE BEST HOME ENTERTAINMENT SYSTEM IS HERE --V2
       </div>
       <div className="heroArticleParagraph">
         Enter a new <span>Dimenssion</span> of total immersiveness
